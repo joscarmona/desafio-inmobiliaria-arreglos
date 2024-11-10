@@ -4,15 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafío 4 - Inmobiliaria (Arreglos)</title>
+    <title>Desafío 4 - Inmobiliaria (Arreglos&Objetos)</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- Tipografía a utilizar desde la página Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     
+    <!-- Agregar iconos desde Fontawesome -->
+    <script src="https://kit.fontawesome.com/f1954fad1e.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+
+    <!-- ------------------------------------------------------------------------------------------------ -->
+    <!-- -------------------------------------------- Layout -------------------------------------------- -->
+    <!-- ------------------------------------------------------------------------------------------------ -->
+    <div class="layout-index">
+        <!-- Nav-Menu -->
+        <nav class="nav-menu">
+            <!-- Contenido del menú de navegación -->
+            <article class="inmobiliaria-logo">
+                <img src="./assets/img/01_logo_inmobiliaria.webp" alt="logo de la empresa inmobiliaria" class="logo">
+                <!-- Dirige a la página de inicio -->
+                <a href="./index.html#" class="home-page">Inmobiliaria Elena</a>
+            </article>
+            <article class="options">
+                <!-- Dirige a la página de inicio -->
+                <a href="./index.html#" class="link-options">Inicio</a>
+                <!-- Dirige a la página donde se encuentran las propiedades en venta -->
+                <a href="./propiedades_venta.html#" class="link-options">En venta</a>
+                <!-- Dirige a la página donde se encuentran las propiedades en alquiler -->
+                <a href="./propiedades_alquiler.html" class="link-options">En alquiler</a>
+            </article>
+        </nav>
+
+        <!-- Header -->
+        <header class="hero-image">
+            <h1 class="h1-index">Arrienda tu propiedad con nosotros, o mejor hazla tuya</h1>        
+        </header>
+
+        <!-- Principal -->
+        <main class="principal-index">
+            <h2>Propiedades en venta</h2>
+            <!-- Product Gallery - Index -->
+            <section class="product-gallery"></section>
+            <h2>Propiedades en alquiler</h2>
+            <!-- Product Gallery - Index -->
+            <section class="product-gallery"></section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- Iconos de redes sociales -->
+            <article class="social-networks">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>                
+            </article>
+            <p>
+                José Carmona - DesafíoLatam
+                <br>
+                Todos los derechos reservados - 2024
+            </p>
+        </footer>
+
+    </div>
     
 </body>
 </html>

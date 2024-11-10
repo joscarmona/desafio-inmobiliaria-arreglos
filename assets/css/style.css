@@ -12,13 +12,29 @@ body{
     font-size: 0.8em;
 }
 
-/* **************** LAYOUT **************** */
-.layout{
-    border: 2px solid purple;
+/* **************** LAYOUTS **************** */
+/* LAYOUT - INDEX */
+.layout-index{
+    /* border: 2px solid purple; */
     height: 100vh;
     display: grid;
     grid-template-areas: 
-    "header"
+    "menu-nav"
+    "hero-image"
+    "principal"
+    "footer";
+    grid-template-rows: 0.5fr 5fr 8fr 1fr;
+    /* text-align: center; */
+    color: #080e1d;
+}
+
+/* LAYOUTS - VENTA - PROPIEDAD */
+.layout-venta-propiedad{
+    /* border: 2px solid purple; */
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "menu-nav"
     "principal"
     "footer";
     grid-template-rows: 0.5fr 8fr 1fr;
@@ -27,15 +43,17 @@ body{
 
 /* **************** NAV-MENU **************** */
 .nav-menu{
-    border: 1px solid red;
-    grid-area: header;
-    background-color: #9EC0DB;
+    /* border: 1px solid red; */
+    grid-area: menu-nav;
+    /* background-color: #9EC0DB; */
+    background-color: #c1daee;
     color: #080e1d;
     display: flex;
     justify-content: space-between;
-    padding: 0.5em 2em 0.5em 2em;
-    width: 100%;
-    position: fixed;
+    padding: 0.6em 4em 0.6em 4em;
+    /* width: 100%; */
+    /* position: fixed; */
+    align-items: center;
 }
 
 /* INMOBILIARIA-LOGO */
@@ -43,7 +61,7 @@ body{
     /* border: 1px solid red; */
     display: flex;
     width: 40%;
-    gap: 10px;
+    gap: 1em;
     align-items: center; 
 }
 
@@ -62,16 +80,90 @@ body{
     text-decoration: none;
 }
 
-
-/* **************** PRINCIPAL **************** */
-.principal{
-    border: 2px solid salmon;
-    grid-area: principal;
+.home-page:hover{
+    color: #2e30c9;;
 }
 
-/* **************** PRODUCT GALLERY **************** */
+/* OPTIONS */
+.options{
+    display: flex;
+    gap: 1em;
+}
+
+/* LINK-OPTIONS */
+.link-options{
+    color: #080e1d;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link-options:hover{
+    color: #2e30c9;
+}
+
+/* **************** HEADER-SECTION **************** */
+.hero-image{
+    /* border: 2px solid purple; */
+    grid-area: hero-image;
+    display: flex;
+    background-image: url('../img/02_hero_image.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+/* H1 INDEX.HTML */
+.h1-index{
+    /* border: 1px solid red; */
+    margin: 1em 2em 0em 7em;
+    /* color: #bfecca; */
+    color: #d7e4da;
+}
+
+/* **************** PRINCIPAL **************** */
+.principal-index{
+    /* border: 2px solid salmon; */
+    grid-area: principal;
+    color: #080e1d;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.principal-venta-alquiler{
+    border: 2px solid salmon;
+    grid-area: principal;
+    color: #080e1d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* H2 -INDEX.HTML */
+h2{
+    /* border: 1px solid green; */
+    padding: 1em 0 0.5em 0;
+    margin: 0 0 0 4em;
+    /* Línea debajo de los encabezados*/
+    border-bottom: 1px solid #c0c4ce;
+    width: 50%;    
+}
+
+/* H1 VENTA - ALQUILER*/
+.h1-venta-alquiler{
+    /* border: 1px solid green; */
+    padding: 0.5em;
+    /* Línea debajo de los encabezados*/
+    border-bottom: 1px solid #c0c4ce;
+    width: 50%;
+}
+
+/* PRODUCT GALLERY */
 .product-gallery{
-    border: 2px solid green;
+    /* border: 2px solid purple; */
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -80,19 +172,32 @@ body{
 
 /* **************** FOOTER **************** */
 .footer{
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     grid-area: footer;
-    background-color: #9EC0DB;
+    background-color: #c1daee;
     color: #080e1d;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
+    gap: 0.5em;
     font-weight: 500;
+    text-align: center;
+    padding: 1em;
+}
+
+/* SOCIAL-NETWORKS */
+.social-networks{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
 }
 
 /* Iconos de redes sociales */
 .fa-brands{
     font-size: 20px;
     color: #080e1d;
+}
+
+.fa-brands:hover{
+    color: #2e30c9;;
 }
