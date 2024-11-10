@@ -3,6 +3,7 @@
 const propiedadesAlquiler = [
     // Objeto 1
     {
+        id: 1,
         nombre: 'Casa en el campo',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen de la casa',
@@ -16,6 +17,7 @@ const propiedadesAlquiler = [
     },
     // Objeto 2
     {
+        id: 2,
         nombre: 'Departamento en el centro de la ciudad',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen del departamento',
@@ -29,6 +31,7 @@ const propiedadesAlquiler = [
     },
     // Objeto 3
     {
+        id: 3,
         nombre: 'Casa en zona residencial',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen de la casa',
@@ -42,6 +45,7 @@ const propiedadesAlquiler = [
     },
     // Objeto 4
     {
+        id: 4,
         nombre: 'Casa en la playa',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen de la casa',
@@ -55,6 +59,7 @@ const propiedadesAlquiler = [
     },
     // Objeto 5
     {
+        id: 5,
         nombre: 'Departamento alejado del centro de la ciudad',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen del departamento',
@@ -68,6 +73,7 @@ const propiedadesAlquiler = [
     },
     // Objeto 6
     {
+        id: 6,
         nombre: 'Condominio en zona suburbana',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen del condominio',
@@ -82,85 +88,23 @@ const propiedadesAlquiler = [
 ]
 
 // Variable que guardará el contenido del arreglo de objetos propiedadesAlquiler para posteriormente añadirlo a la sección correspondiente en la página web propiedades_alquiler.html
-let dynamicContentOfPropiedadesAlquiler = ""
+// let dynamicContentOfPropiedadesAlquiler = ""
 
-// Guardando el contenido del arreglo de objetos propiedadesAlquiler en la variable dynamicContentOfPropiedadesAlquiler
-for(let propiedad of propiedadesAlquiler){
-    dynamicContentOfPropiedadesAlquiler += `
-        <!-- Card propiedad -->
-        <article class="card">
-            <!-- Card image -->
-            <img src="${propiedad.src}" alt="${propiedad.alt}" class="card-image">
-            <!-- Card body -->
-            <div class="card-body">
-                <!-- Nombre -->
-                <h2 class="card-title">${propiedad.nombre}</h2>
-                <!-- Descripción -->
-                <p class="parrafo">${propiedad.descripcion}</p>
-                <!-- Ubicación -->
-                <p class="parrafo">
-                    <i class="fas fa-map-marker-alt"></i> ${propiedad.ubicacion}
-                </p>
-                <!-- Habitaciones -->
-                <p class="parrafo">
-                    <i class="fas fa-bed"></i> ${propiedad.habitaciones} Habitaciones |
-                    <i class="fas fa-bath"></i> ${propiedad.baños} Baños
-                </p>
-                <!-- Costo -->
-                <p class="parrafo"><i class="fas fa-dollar-sign"></i> ${propiedad.costo}</p>
-    `
-    // Se chequea si en la propiedad se permite fumar o no se permite y mostrará la información que corresponda según sea el caso
-    if(propiedad.smoke){
-        dynamicContentOfPropiedadesAlquiler += `
-                <!-- Smoke -->
-                <p style="color: green;" class="parrafo">
-                    <i class="fas fa-smoking"></i> Permitido fumar
-                </p>
-                ` 
-    }
-    else{
-        dynamicContentOfPropiedadesAlquiler += `
-                <!-- Smoke -->
-                <p style="color: red;" class="parrafo">
-                    <i class="fas fa-smoking-ban"></i> No se permite fumar
-                </p>
-                `
-    }
-    // Se chequea si en la propiedad se permiten mascotas o no se permiten y mostrará la información que corresponda según sea el caso
-    if(propiedad.pets){
-        dynamicContentOfPropiedadesAlquiler += `
-                <!-- Pets -->
-                <p style="color: green;" class="parrafo">
-                    <i class="fas fa-paw"></i> Mascotas permitidas
-                </p>
-            </div>
-        </article>
-        `        
-    }
-    else{
-        dynamicContentOfPropiedadesAlquiler += `
-                <!-- Pets -->
-                <p style="color: red;" class="parrafo">
-                    <i class="fa-solid fa-ban"></i> No se permiten mascotas
-                </p>
-            </div>
-        </article>
-        `
-    }
-}
+let dynamicContentOfPropiedades = ""
 
-// Selección del elemento web en el cual se adicionará el contenido guardado en la variable dynamicContentOfPropiedadesAlquiler
-const sectionElementProductGallery = document.querySelector(".product-gallery")
+// Selección del elemento web en el cual se adicionará el contenido guardado en la variable dynamicContentOfPropiedades
+const sectionElementProductGalleryAlquiler = document.querySelector("#propiedades-alquiler")
 
-// Agregando el contenido de la variable dynamicContentOfPropiedadesAlquiler al elemento web asignado a la variable sectionElementProductGallery
-sectionElementProductGallery.innerHTML = dynamicContentOfPropiedadesAlquiler
+// Agregando el contenido de la variable dynamicContentOfPropiedades al elemento web asignado a la variable sectionElementProductGallery
+sectionElementProductGalleryAlquiler ? sectionElementProductGalleryAlquiler.innerHTML = renderCard(propiedadesAlquiler) : ""
 
 /*********************************************************** */
 
 /* **************** PROPIEDADES EN VENTA **************** */
 const propiedadesVenta = [
     // Objeto 1
-    {
+    {   
+        id: 1,
         nombre: 'Casa en el campo',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen de la casa',
@@ -174,6 +118,7 @@ const propiedadesVenta = [
     },
     // Objeto 2
     {
+        id: 2,
         nombre: 'Casa en zona residencial',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen de la casa',
@@ -187,6 +132,7 @@ const propiedadesVenta = [
     },
     // Objeto 3
     {
+        id: 3,
         nombre: 'Departamento Home studio en parque industrial',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen del departamento',
@@ -200,6 +146,7 @@ const propiedadesVenta = [
     },
     // Objeto 4
     {
+        id: 4,
         nombre: 'Casa en la playa',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen de la casa',
@@ -213,6 +160,7 @@ const propiedadesVenta = [
     },
     // Objeto 5
     {
+        id: 5,
         nombre: 'Departamento en el centro',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen del departamento',
@@ -226,6 +174,7 @@ const propiedadesVenta = [
     },
     // Objeto 6
     {
+        id: 6,
         nombre: 'Casa en las afueras de la ciudad',
         src: './assets/img/03_casa_campo.webp',
         alt: 'Imagen de la casa',
@@ -239,4 +188,117 @@ const propiedadesVenta = [
     }
 ]
 
-/******************************************************** */
+// Variable que guardará el contenido del arreglo de objetos propiedadesVenta para posteriormente añadirlo a la sección correspondiente en la página web propiedades_venta.html
+// let dynamicContentOfPropiedadesVenta = ""
+
+dynamicContentOfPropiedades = ""
+
+// Selección del elemento web en el cual se adicionará el contenido guardado en la variable dynamicContentOfPropiedades
+const sectionElementProductGalleryVenta = document.querySelector("#propiedades-venta")
+
+// Agregando el contenido de la variable dynamicContentOfPropiedades al elemento web asignado a la variable sectionElementProductGallery
+sectionElementProductGalleryVenta ? sectionElementProductGalleryVenta.innerHTML = renderCard(propiedadesVenta) : ""
+
+/* ***************************************************************************** */
+
+/* **************** INDEX.HTML **************** */
+/* *** VENTA *** */
+// Variable que guardará el contenido del arreglo de objetos propiedadesVenta para posteriormente añadirlo a la sección correspondiente en la página web de inicio, solo se mostrarán 3 propiedades en ventas
+
+dynamicContentOfPropiedades = ""
+
+// Selección del elemento web en el cual se adicionará el contenido guardado en la variable dynamicContentOfPropiedades
+const sectionElementProductGalleryIndexVenta = document.querySelector("#index-propiedades-venta")
+
+// Agregando el contenido de la variable dynamicContentOfPropiedades al elemento web asignado a la variable sectionElementProductGallery
+sectionElementProductGalleryIndexVenta ? sectionElementProductGalleryIndexVenta.innerHTML = renderCard(propiedadesVenta, 3) : ""
+
+/* *** ALQUILER *** */
+// Variable que guardará el contenido del arreglo de objetos propiedadesVenta para posteriormente añadirlo a la sección correspondiente en la página web de inicio, solo se mostrarán 3 propiedades en alquiler
+
+dynamicContentOfPropiedades = ""
+
+// Selección del elemento web en el cual se adicionará el contenido guardado en la variable dynamicContentOfPropiedades
+const sectionElementProductGalleryIndexAlquiler = document.querySelector("#index-propiedades-alquiler")
+
+// Agregando el contenido de la variable dynamicContentOfPropiedades al elemento web asignado a la variable sectionElementProductGallery
+sectionElementProductGalleryIndexAlquiler ? sectionElementProductGalleryIndexAlquiler.innerHTML = renderCard(propiedadesAlquiler, 3) : ""
+
+/* ***************************************************************************** */
+
+
+/* **** FUNCIÓN QUE RETORNA EL CONTENIDO A AGREGAR EN EL HTML, **** */
+/* ************** TANTO PARA VENTA COMO PARA ALQUILER ************* */
+function renderCard(ArregloDePropiedades, propiedadId = ArregloDePropiedades.length){
+    // Guardando el contenido del arreglo de objetos propiedadesAlquiler en la variable dynamicContentOfPropiedades
+    for(let propiedad of ArregloDePropiedades){
+        if(propiedad.id <= propiedadId){
+            console.log(propiedad.id)
+
+            dynamicContentOfPropiedades += `
+            <!-- Card propiedad -->
+            <article class="card">
+                <!-- Card image -->
+                <img src="${propiedad.src}" alt="${propiedad.alt}" class="card-image">
+                <!-- Card body -->
+                <div class="card-body">
+                    <!-- Nombre -->
+                    <h2 class="card-title">${propiedad.nombre}</h2>
+                    <!-- Descripción -->
+                    <p class="parrafo">${propiedad.descripcion}</p>
+                    <!-- Ubicación -->
+                    <p class="parrafo">
+                        <i class="fas fa-map-marker-alt"></i> ${propiedad.ubicacion}
+                    </p>
+                    <!-- Habitaciones -->
+                    <p class="parrafo">
+                        <i class="fas fa-bed"></i> ${propiedad.habitaciones} Habitaciones |
+                        <i class="fas fa-bath"></i> ${propiedad.baños} Baños
+                    </p>
+                    <!-- Costo -->
+                    <p class="parrafo"><i class="fas fa-dollar-sign"></i> ${propiedad.costo}</p>
+        `
+        // Se chequea si en la propiedad se permite fumar o no se permite y mostrará la información que corresponda según sea el caso
+        if(propiedad.smoke){
+            dynamicContentOfPropiedades += `
+                    <!-- Smoke -->
+                    <p style="color: green;" class="parrafo">
+                        <i class="fas fa-smoking"></i> Permitido fumar
+                    </p>
+                    ` 
+        }
+        else{
+            dynamicContentOfPropiedades += `
+                    <!-- Smoke -->
+                    <p style="color: red;" class="parrafo">
+                        <i class="fas fa-smoking-ban"></i> No se permite fumar
+                    </p>
+                    `
+        }
+        // Se chequea si en la propiedad se permiten mascotas o no se permiten y mostrará la información que corresponda según sea el caso
+        if(propiedad.pets){
+            dynamicContentOfPropiedades += `
+                    <!-- Pets -->
+                    <p style="color: green;" class="parrafo">
+                        <i class="fas fa-paw"></i> Mascotas permitidas
+                    </p>
+                </div>
+            </article>
+            `        
+        }
+        else{
+            dynamicContentOfPropiedades += `
+                    <!-- Pets -->
+                    <p style="color: red;" class="parrafo">
+                        <i class="fa-solid fa-ban"></i> No se permiten mascotas
+                    </p>
+                </div>
+            </article>
+            `
+        }
+        }
+        
+    }
+
+    return dynamicContentOfPropiedades
+}
