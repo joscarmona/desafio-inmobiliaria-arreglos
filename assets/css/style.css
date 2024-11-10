@@ -46,11 +46,11 @@ body{
     /* border: 1px solid red; */
     grid-area: menu-nav;
     /* background-color: #9EC0DB; */
-    background-color: #c1daee;
+    background-color: #e3eef7;
     color: #080e1d;
     display: flex;
     justify-content: space-between;
-    padding: 0.6em 4em 0.6em 4em;
+    padding: 0.6em 8em 0.6em 8em;
     /* width: 100%; */
     /* position: fixed; */
     align-items: center;
@@ -133,7 +133,7 @@ body{
 }
 
 .principal-venta-alquiler{
-    border: 2px solid salmon;
+    /* border: 2px solid salmon; */
     grid-area: principal;
     color: #080e1d;
     display: flex;
@@ -142,7 +142,7 @@ body{
 }
 
 /* H2 -INDEX.HTML */
-h2{
+.h2-index{
     /* border: 1px solid green; */
     padding: 1em 0 0.5em 0;
     margin: 0 0 0 4em;
@@ -154,27 +154,49 @@ h2{
 /* H1 VENTA - ALQUILER*/
 .h1-venta-alquiler{
     /* border: 1px solid green; */
-    padding: 0.5em;
+    padding: 0.2em;
     /* Línea debajo de los encabezados*/
     border-bottom: 1px solid #c0c4ce;
-    width: 50%;
+    width: 80%;
 }
 
 /* PRODUCT GALLERY */
 .product-gallery{
     /* border: 2px solid purple; */
-    height: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 1.5em 8em 1.5em 8em;
     justify-items: center;
 }
+
+/* CARD PROPIEDAD */
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #c0c4ce;
+    border-radius: 5px;
+}
+
+/* CARD-IMAGE */
+.card-image{
+    height: 250px;
+    width: 100%;
+}
+
+/* CARD-TITLE & CARD PÁRRAFOS */
+.card-title, .parrafo{
+    padding: 0.5em;
+    line-height: 1.6em;
+}
+
 
 /* **************** FOOTER **************** */
 .footer{
     /* border: 2px solid orange; */
     grid-area: footer;
-    background-color: #c1daee;
+    background-color: #e3eef7;
     color: #080e1d;
     display: flex;
     flex-direction: column;
