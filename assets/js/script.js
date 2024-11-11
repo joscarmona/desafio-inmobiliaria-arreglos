@@ -19,7 +19,7 @@ const propiedadesAlquiler = [
     {
         id: 2,
         nombre: 'Departamento en el centro de la ciudad',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/04_departamento_centro.webp',
         alt: 'Imagen del departamento',
         descripcion: 'Hermoso departamento ubicado en la zona céntrica de la ciudad, cerca de universidades, comercio, hospitales, etc.',
         ubicacion: '2466 José Fernández, Concepción',
@@ -33,7 +33,7 @@ const propiedadesAlquiler = [
     {
         id: 3,
         nombre: 'Casa en zona residencial',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/05_casa_zona_residencial.webp',
         alt: 'Imagen de la casa',
         descripcion: 'Amplia casa ubicada en zona residencial, muy tranquila',
         ubicacion: '792 Río Bueno, Talcahuano',
@@ -47,21 +47,21 @@ const propiedadesAlquiler = [
     {
         id: 4,
         nombre: 'Casa en la playa',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/06_casa_playa.webp',
         alt: 'Imagen de la casa',
-        descripcion: 'Casa ubicada justo a orilla de la playa',
+        descripcion: 'Casa ubicada justo frente al mar',
         ubicacion: '5329 Puig Jara, Dichato',
         habitaciones: 4,
         baños: 2,
         costo: 10000,
-        smoke: false,
-        pets: false
+        smoke: true,
+        pets: true
     },
     // Objeto 5
     {
         id: 5,
         nombre: 'Departamento alejado del centro de la ciudad',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/07_departamento_alejado_centro.webp',
         alt: 'Imagen del departamento',
         descripcion: 'Acogedor departamento ubicado en zona residecial extremadamente tranquila, alejado del ritmo frenetico que se vive en el centro de la ciudad',
         ubicacion: '6873 Media Plaza, Concepción',
@@ -75,7 +75,7 @@ const propiedadesAlquiler = [
     {
         id: 6,
         nombre: 'Condominio en zona suburbana',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/08_condominio_suburbano.webp',
         alt: 'Imagen del condominio',
         descripcion: 'Ubicado en las afueras de la ciudad donde se respira aire fresco y reina la paz y la tranquilidad, con servicio de vigilancia 24/7',
         ubicacion: '513 La Verdadera Luz, Chiguayante',
@@ -106,7 +106,7 @@ const propiedadesVenta = [
     {   
         id: 1,
         nombre: 'Casa en el campo',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/09_casa_campo_vinedos.webp',
         alt: 'Imagen de la casa',
         descripcion: 'Rodeada de viñedos se ubica esta preciosa casa donde impera la paz',
         ubicacion: '145 Redondo García, Cabrero',
@@ -120,7 +120,7 @@ const propiedadesVenta = [
     {
         id: 2,
         nombre: 'Casa en zona residencial',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/10_casa_zona_residencial.webp',
         alt: 'Imagen de la casa',
         descripcion: 'Casa ubicada entre el centro y las afueras de la ciudad permitiendo estar en una zona más tranquila sin tener que alejarse tanto de la ciudad',
         ubicacion: '3576 Sol Vive, Concepción',
@@ -134,7 +134,7 @@ const propiedadesVenta = [
     {
         id: 3,
         nombre: 'Departamento Home studio en parque industrial',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/11_hom_studio.webp',
         alt: 'Imagen del departamento',
         descripcion: 'Departamento ubicado en las cercanías de parque industrial, ideal si se trabaja en dicho lugar',
         ubicacion: '5274 Las Gaviotas, Coronel',
@@ -148,7 +148,7 @@ const propiedadesVenta = [
     {
         id: 4,
         nombre: 'Casa en la playa',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/12_casa_playa.webp',
         alt: 'Imagen de la casa',
         descripcion: 'Cómoda casa ubicada frente al mar',
         ubicacion: '547 Las Estrelladas, Pingueral',
@@ -162,7 +162,7 @@ const propiedadesVenta = [
     {
         id: 5,
         nombre: 'Departamento en el centro',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/13_departamento_centro.webp',
         alt: 'Imagen del departamento',
         descripcion: 'Departamento en pleno centro, solo a un par de cuadros de todos servicios, comercios, universidades, etc.',
         ubicacion: '1275 Luna Brilla, Concepción',
@@ -176,7 +176,7 @@ const propiedadesVenta = [
     {
         id: 6,
         nombre: 'Casa en las afueras de la ciudad',
-        src: './assets/img/03_casa_campo.webp',
+        src: './assets/img/14_casa_afueras_ciudad.webp',
         alt: 'Imagen de la casa',
         descripcion: 'Hermosa casa ubicada a 10 minutos de la ciudad, cuenta con un terreno amplio poblado principalemente de árboles frutales',
         ubicacion: '1275 Luna Brilla, Concepción',
