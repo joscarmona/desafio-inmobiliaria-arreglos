@@ -229,8 +229,11 @@ sectionElementProductGalleryIndexAlquiler ? sectionElementProductGalleryIndexAlq
 
 /* **** FUNCIÓN QUE RETORNA EL CONTENIDO A AGREGAR EN EL HTML, **** */
 /* ************** TANTO PARA VENTA COMO PARA ALQUILER ************* */
+/* ** FINALMENTE SE ADAPTO PARA PODER AGREGAR HTML AL INDEX.HTML ** */
+/* ****** INCLUYENDO OTOR PARÁMETRO A LA FUNCIÓN propiedadID ****** */
+/* ****** QUEDA CON VALOR POR DEFECTO LA LONGITUD DEL ARREGLO ***** */
 function renderCard(ArregloDePropiedades, propiedadId = ArregloDePropiedades.length){
-    // Guardando el contenido del arreglo de objetos propiedadesAlquiler en la variable dynamicContentOfPropiedades
+    // Guardando el contenido del arreglo de objetos ArregloDePropiedades en la variable dynamicContentOfPropiedades
     for(let propiedad of ArregloDePropiedades){
         if(propiedad.id <= propiedadId){
             console.log(propiedad.id)
@@ -299,6 +302,5 @@ function renderCard(ArregloDePropiedades, propiedadId = ArregloDePropiedades.len
         }
         
     }
-
     return dynamicContentOfPropiedades
 }
